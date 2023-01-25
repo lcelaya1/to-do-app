@@ -17,7 +17,6 @@ const show = ref(true)
 
 function changeShow() {
     show.value = !show.value
-    console.log(show.value)
 }
 
 </script>
