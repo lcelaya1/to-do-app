@@ -1,10 +1,13 @@
 <template>
-    <header class=" bg-ikea-blue">
-        <nav class=" container py-5 px-4 flex items-center justify-between">
-            <div class="bg-ikea-yellow border-0 w-14 h-14 rounded-full stroke-ikea-yellow flex items-center justify-center">
-                <img src="../assets/task.png" alt="Task Logo" class="w-8">
+    <header class=" bg-ikea-blue shadow-lg ">
+        <nav class="container py-5 px-4 flex items-center justify-between">
+            <router-link to="/" class="bg-ikea-yellow border-0 w-14 h-14 rounded-full stroke-ikea-yellow flex items-center justify-center">
+                <i class="fa-solid fa-list-check fa-xl text-slate-900"></i>
+            </router-link>
+            <div class="flex w-48 justify-between">
+                <router-link to="/create" class="text-ikea-yellow font-medium text-lg">Create Task</router-link>
+                <button @click="signOut" class="text-ikea-yellow font-medium text-lg">Sign Out</button>
             </div>
-            <button @click="signOut" class="text-ikea-yellow font-medium text-lg">Sign Out</button>
         </nav>
     </header>
     <p v-if="errorMsg" class=" max-w-md m-auto text-red-500 text-center rounded-xl shadow-lg py-10">{{ errorMsg }}</p>
